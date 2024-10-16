@@ -1,0 +1,108 @@
+:root {
+    --center-width: 100vw;
+    --center-height: 100vh;
+    --header-height: 60px;
+    --header-padding: 10px;
+    --header-padding-left-right: 40px;
+    --text-color: white;
+    --nav-gap: 50px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--center-width);
+    height: var(--center-height);
+    background-color: rgb(18, 8, 29);
+    color: rgb(225, 237, 248);
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 24px;
+  }
+  
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: var(--header-height);
+    padding: var(--header-padding);
+    padding-left: var(--header-padding-left-right);
+    padding-right: var(--header-padding-left-right);
+    color: var(--text-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .header-wrapper-home ul {
+    list-style-type: none;
+  }
+  
+  .header-wrapper-home a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  
+  .header-wrapper-nav ul {
+    display: flex;
+    gap: var(--nav-gap);
+    list-style-type: none;
+    position: relative;
+  }
+  
+  .header-wrapper-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.7rem;
+    position: relative;
+  }
+  
+  /* Hover effect for the nav li elements */
+  .header-wrapper-nav li {
+    position: relative;
+    list-style: none;
+  }
+  
+  .header-wrapper-nav li::before,
+  .header-wrapper-nav li::after {
+    content: "";
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .header-wrapper-nav li::before {
+    content: ">";
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .header-wrapper-nav li::after {
+    content: "<";
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .header-wrapper-nav li:hover::before,
+  .header-wrapper-nav li:hover::after {
+    opacity: 1;
+  }
+  
