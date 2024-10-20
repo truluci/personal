@@ -14,4 +14,12 @@ router.get('/contact', (req, res) => {
     res.render('contact');
 });
 
+router.get('/projects', (req, res) => {
+    res.render('projects');
+});
+
+router.get('/pictures', (req, res) => {
+    res.render('pictures');
+});
+
 module.exports = router;
