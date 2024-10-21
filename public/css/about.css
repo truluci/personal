@@ -24,9 +24,65 @@ body {
 }
 
 .about-me-wrapper h1 {
-  padding: 1rem 0 3rem;
+  padding: 3rem 0 2rem;
 }
 
 .about-me-wrapper-about-text {
   line-height: 35px;
+}
+
+.about-me-wrapper-links-wrapper {
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+.about-me-wrapper-links {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-me-wrapper-links a {
+  text-decoration: none;
+  color: rgb(114, 209, 231);
+  font-size: 1.7rem;
+  margin: 0 auto;
+}
+
+/* Hover effect for the nav li elements */
+.about-me-wrapper-links a {
+  position: relative;
+  list-style: none;
+}
+
+.about-me-wrapper-links a::before,
+.about-me-wrapper-links a::after {
+  content: "";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-me-wrapper-links a::before {
+  content: ">";
+  /* position: absolute;
+  top: 50%;
+  left: -12px;
+  transform: translateY(-50%); */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-me-wrapper-links a::after {
+  content: "<";
+  /* position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translateY(-50%); */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-me-wrapper-links a:hover::before,
+.about-me-wrapper-links a:hover::after {
+  opacity: 1;
 }

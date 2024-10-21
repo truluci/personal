@@ -83,20 +83,20 @@
   
   .header-wrapper-nav li::before {
     content: ">";
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: -12px;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
     opacity: 0;
     transition: opacity 0.3s ease;
   }
   
   .header-wrapper-nav li::after {
     content: "<";
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     right: -12px;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
     opacity: 0;
     transition: opacity 0.3s ease;
   }
