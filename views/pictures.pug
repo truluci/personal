@@ -2,13 +2,15 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title contact
+        title pictures
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap")
         link(rel='stylesheet', href='/css/pictures.css')
     body 
         include ./partials/header.pug
-        h1 Pictures
-        p This is the pictures page.
+        div.pictures-wrapper
+            h1.pictures-wrapper-header Pictures
+            div.pictures-wrapper-images
+                img.pictures-wrapper-image(src="../images/cat.jpeg", alt="cat image", width="400", height="300")
         include ./partials/footer.pug
