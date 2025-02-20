@@ -1,25 +1,11 @@
-const express = require('express');
-const router = express.Router();
+import { Router } from 'express';
 
-// Define your routes
-router.get('/', (req, res) => {
-    res.render('index');
-});
+import indexGetController from '../controllers/index/get.js';
 
-router.get('/about', (req, res) => {
-    res.render('about');
-});
+const indexRouter = Router();
 
-router.get('/contact', (req, res) => {
-    res.render('contact');
-});
+indexRouter.get('/',
+  indexGetController
+);
 
-router.get('/projects', (req, res) => {
-    res.render('projects');
-});
-
-router.get('/pictures', (req, res) => {
-    res.render('pictures');
-});
-
-module.exports = router;
+export default indexRouter;

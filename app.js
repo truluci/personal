@@ -1,15 +1,24 @@
-const express = require('express');
-const app = express();
-const path = require('path');
+import express from 'express';
 
-app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'views'));
-
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', require('./routes/index'));
+import indexRouter from './routes/index.js';
+import picturesRouter from './routes/pictures.js';
+import projectsRouter from './routes/projects.js';
+import aboutRouter from './routes/about.js';
 
 const PORT = process.env.PORT || 3000;
+
+const app = express();
+
+app.set('view engine', 'pug');
+app.set('views', './views');
+
+app.use(express.static('public'));
+
+app.use('/', indexRouter);
+app.use('/pictures', picturesRouter);
+app.use('/projects', projectsRouter);
+app.use('/about', aboutRouter);
+
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

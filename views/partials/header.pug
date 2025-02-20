@@ -1,20 +1,13 @@
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title about
-        link(rel="preconnect" href="https://fonts.googleapis.com")
-        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap")
-        link(rel='stylesheet', href='/css/header.css')
-    body
-        header.header-wrapper
-          div.header-wrapper-home
-            ul
-              li: a(href='/') truluci
-          nav.header-wrapper-nav
-            ul
-              li: a(href='/projects') Projects
-              li: a(href='/about') About
-              li: a(href='/contact') Contact
-              li: a(href='/pictures') Pictures
+extends ../partials/head.pug
+block content
+  header.header-wrapper
+    div.header-wrapper-home
+      ul
+        li: a(href='/') truluci
+    nav.header-wrapper-nav
+      ul
+        li: a(href='/projects') Projects
+        li: a(href='/about') About
+        li: a(href='/pictures') Pictures
+        li: a(href='mailto:merits.septets_06@icloud.com') Contact
+  block main
