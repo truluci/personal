@@ -1,98 +1,92 @@
 :root {
-    --center-width: 100vw;
-    --center-height: 100vh;
-    --header-height: 60px;
-    --header-padding: 10px;
-    --header-padding-left-right: 40px;
-    --text-color: white;
-    --nav-gap: 50px;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--center-width);
-    height: var(--center-height);
-    background-color: rgb(18, 8, 29);
-    color: rgb(225, 237, 248);
-    font-family: "Pixelify Sans", sans-serif;
-    font-size: 24px;
-  }
-  
-  .header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: var(--header-height);
-    padding: var(--header-padding);
-    padding-left: var(--header-padding-left-right);
-    padding-right: var(--header-padding-left-right);
-    color: var(--text-color);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
-  
-  .header-wrapper-home ul {
-    list-style-type: none;
-  }
-  
-  .header-wrapper-home a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 1.7rem;
-    font-weight: bold;
-  }
-  
-  .header-wrapper-nav ul {
-    display: flex;
-    gap: var(--nav-gap);
-    list-style-type: none;
-    position: relative;
-  }
-  
-  .header-wrapper-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 1.7rem;
-    position: relative;
-  }
-  
-  .header-wrapper-nav li {
-    position: relative;
-    list-style: none;
-  }
-  
-  .header-wrapper-nav li::before,
-  .header-wrapper-nav li::after {
-    content: "";
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .header-wrapper-nav li::before {
-    content: ">";
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .header-wrapper-nav li::after {
-    content: "<";
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .header-wrapper-nav li:hover::before,
-  .header-wrapper-nav li:hover::after {
-    opacity: 1;
-  }
+  --navbar-padding: 1.5rem;
+  --navbar-button-spacing: 1.5rem;
+  --navbar-buttons-border-radius: 0px;
+  --navbar-button-width: 7rem; /* Minimum width for navbar buttons */
+  --navbar-button-height: 3rem; /* Minimum height for navbar buttons */
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-bg-color);
+}
+
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--page-horizontal-padding);
+  min-width: 100%;
+  font-size: var(--font-size-small);
+  /* fixed position on the window */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(var(--navbar-button-height) + 2 * var(--navbar-padding));
+  min-height: calc(var(--navbar-button-height) + 2 * var(--navbar-padding));
+  padding: var(--page-vertical-padding) var(--page-horizontal-padding);
+  z-index: 1000;
+}
+
+.header-wrapper-home {
+  color: var(--text-color);
+  font-size: var(--font-size-medium);
+  border-radius: var(--border-radius-lg);
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  width: fit-content;
+  height: var(--navbar-button-height);
+  min-width: fit-content; /* Applying minimum width */
+  min-height: var(--navbar-button-height); /* Applying minimum height */
+  text-align: center;
+  align-content: center;
+  align-self: center;
+}
+
+.header-wrapper-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: var(--page-horizontal-padding);
+}
+
+.header-wrapper-nav a {
+  color: var(--text-color);
+  /* margin-left: var(--spacing); */
+  border-radius: var(--border-radius-lg);
+  padding: 0.5rem 0.5rem;
+  /* background-color: var(--button-bg-color); */
+  font-size: var(--font-size-medium);
+  text-decoration: none;
+  width: fit-content;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  height: var(--navbar-button-height);
+  min-width: var(--navbar-button-width); /* Applying minimum width */
+  min-height: var(--navbar-button-height); /* Applying minimum height */
+}
+
+.header-wrapper-nav a::before,
+.header-wrapper-nav a::after {
+  content: "";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.header-wrapper-nav a::before {
+  content: ">";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.header-wrapper-nav a::after {
+  content: "<";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.header-wrapper-nav a:hover::before,
+.header-wrapper-nav a:hover::after {
+  opacity: 1;
+}

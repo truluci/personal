@@ -1,13 +1,10 @@
 extends ../partials/head.pug
 block content
-  header.header-wrapper
-    div.header-wrapper-home
-      ul
-        li: a(href='/') truluci
-    nav.header-wrapper-nav
-      ul
-        li: a(href='/projects') Projects
-        li: a(href='/about') About
-        li: a(href='/pictures') Pictures
-        li: a(href='mailto:merits.septets_06@icloud.com') Contact
+  .header-wrapper
+    a.header-wrapper-home(href='/') truluci
+    li.header-wrapper-nav
+      a(href='/projects') Projects
+      a(href='/pictures') Pictures
+      a(href='/about') About
+      a(href='mailto:merits.septets_06@icloud.com') Contact
   block main

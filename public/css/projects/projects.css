@@ -1,0 +1,97 @@
+.projects-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--page-vertical-padding) var(--page-horizontal-padding);
+    text-align: center;
+}
+
+.projects-wrapper-header {
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    color: var(--text-color-highlight);
+    text-transform: uppercase;
+    text-shadow: 3px 3px var(--button-bg-color);
+    margin-bottom: var(--spacing);
+}
+
+.projects-wrapper-projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing);
+    width: 100%;
+    max-width: 1200px;
+}
+
+.projects-wrapper-project {
+    background: var(--secondary-bg-color);
+    padding: var(--button-padding);
+    border-radius: var(--border-radius-md);
+    box-shadow: 4px 4px 0 var(--text-color);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projects-wrapper-project-image {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+    border-bottom: 4px solid var(--button-bg-color);
+}
+
+.projects-wrapper-project-header {
+    font-size: var(--font-size-medium);
+    color: var(--text-color-highlight);
+    margin: var(--button-spacing) 0;
+}
+
+.projects-wrapper-project-text {
+    font-size: var(--font-size-small);
+    color: var(--text-color);
+    margin-bottom: var(--button-spacing);
+}
+
+.projects-wrapper-project a {
+    display: inline-block;
+    color: var(--button-text-color);
+    text-decoration: none;
+    padding: var(--button-padding);
+    border-radius: var(--border-radius-sm);
+    transition: all 0.3s ease-in-out;
+}
+
+a::before,
+a::after {
+    content: "";
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+a::before {
+    content: ">";
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+a::after {
+    content: "<";
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+a:hover::before,
+a:hover::after {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 900px) {
+    .projects-wrapper-projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .projects-wrapper-projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

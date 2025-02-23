@@ -1,0 +1,117 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+}
+  
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+textarea, input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    resize: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+}
+
+:root {
+    --primary-bg-color: #635985;
+    --secondary-bg-color: #443C68;
+    --button-bg-color: #393053;
+    --button-text-color: #18122B;
+    --text-color: #18122B;
+    --text-color-highlight: #2f2354;
+
+    --wrapper-width: 100vw;
+    --wrapper-height: 80vh;
+    --button-min-width: 8rem;
+    --button-min-height: 2.5rem;
+
+    --font-size-large: 2rem;
+    --font-size-medium: 1.4rem;
+    --font-size-small: 1.2rem;
+
+    --page-horizontal-padding: 60px;
+    --page-vertical-padding: 20px;
+    --navbar-padding: 1.5rem;
+    --button-padding: 0.7rem 1.5rem;
+
+    --spacing: 1.5rem;
+    --button-spacing: 1.5rem;
+
+    --border-radius-lg: 24px;
+    --border-radius-md: 16px;
+    --border-radius-sm: 8px;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0px;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: calc(var(--page-vertical-padding) + var(--navbar-button-height) + 2 * var(--navbar-padding)) var(--page-horizontal-padding) var(--page-vertical-padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--page-vertical-padding);
+}
+
+@media only screen and (min-width: 1920px) {
+:root {
+    --page-horizontal-padding: calc((100vw - 1920px) / 2 + 60px);
+}
+}
+@media only screen and (max-width: 800px) {
+:root {
+    --page-horizontal-padding: 45px;
+}
+}
+@media only screen and (max-width: 600px) {
+:root {
+    --page-horizontal-padding: 30px;
+}
+}
+@media only screen and (max-width: 505px) {
+:root {
+    --page-horizontal-padding: 20px;
+    --button-width: 2.5rem;
+
+    --font-size-large: 1.8rem;
+    --font-size-medium: 1.2rem;
+    --font-size-small: 1rem;
+
+}
+}
+@media only screen and (max-width: 440px) {
+:root {
+    --page-horizontal-padding: 12px;
+    --page-vertical-padding: 12px;
+}
+}
+  

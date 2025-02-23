@@ -1,11 +1,12 @@
 extends ../partials/head.pug
 
 block content
-  h1 truluci
-  nav.main-wrapper
-    ul.main-wrapper-list
-      li: a(href='/about') about
-      li: a(href='/projects') projects
-      li: a(href='/pictures') pictures
-      li: a(href='mailto:merits.septets_06@icloud.com') contact
-  p Student with an interest in software, technology, space, science and more.
+  div.main-wrapper
+    h1 truluci
+    nav.main-wrapper-nav
+      ul.main-wrapper-nav-list
+        li: a(href='/projects') projects
+        li: a(href='/pictures') pictures
+        li: a(href='/about') about
+        li: a(href='mailto:merits.septets_06@icloud.com') contact
+    p.main-wrapper-info Student with an interest in software, technology, space, science and more.
