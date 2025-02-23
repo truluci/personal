@@ -36,6 +36,30 @@
     transition: transform 0.3s ease-in-out;
 }
 
+a::before,
+a::after {
+    content: "";
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+a::before {
+    content: ">";
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+a::after {
+    content: "<";
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+a:hover::before,
+a:hover::after {
+    opacity: 1;
+}
+
 @media only screen and (max-width: 600px) {
     .pictures-wrapper-header {
         font-size: var(--font-size-medium);
