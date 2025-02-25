@@ -21,6 +21,7 @@
     gap: var(--spacing);
     width: 100%;
     max-width: 1200px;
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 .projects-wrapper-project {
@@ -60,28 +61,15 @@
     transition: all 0.3s ease-in-out;
 }
 
-a::before,
-a::after {
-    content: "";
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-a::before {
-    content: ">";
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-a::after {
-    content: "<";
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-a:hover::before,
-a:hover::after {
-    opacity: 1;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media only screen and (max-width: 900px) {

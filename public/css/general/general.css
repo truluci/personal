@@ -82,6 +82,30 @@ body {
     gap: var(--page-vertical-padding);
 }
 
+a::before,
+a::after {
+  content: "";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+a::before {
+  content: ">";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+a::after {
+  content: "<";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+a:hover::before,
+a:hover::after {
+  opacity: 1;
+}
+
 @media only screen and (min-width: 1920px) {
 :root {
     --page-horizontal-padding: calc((100vw - 1920px) / 2 + 60px);

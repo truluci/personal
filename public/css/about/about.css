@@ -57,30 +57,6 @@
   transform: scale(1.1);
 }
 
-a::before,
-a::after {
-    content: "";
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-a::before {
-    content: ">";
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-a::after {
-    content: "<";
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-a:hover::before,
-a:hover::after {
-    opacity: 1;
-}
-
 @keyframes fadeIn {
   from {
       opacity: 0;

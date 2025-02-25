@@ -18,7 +18,6 @@ body {
   gap: var(--page-horizontal-padding);
   min-width: 100%;
   font-size: var(--font-size-small);
-  /* fixed position on the window */
   position: absolute;
   top: 0;
   left: 0;
@@ -65,28 +64,4 @@ body {
   height: var(--navbar-button-height);
   min-width: var(--navbar-button-width); /* Applying minimum width */
   min-height: var(--navbar-button-height); /* Applying minimum height */
-}
-
-.header-wrapper-nav a::before,
-.header-wrapper-nav a::after {
-  content: "";
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.header-wrapper-nav a::before {
-  content: ">";
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.header-wrapper-nav a::after {
-  content: "<";
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.header-wrapper-nav a:hover::before,
-.header-wrapper-nav a:hover::after {
-  opacity: 1;
 }
