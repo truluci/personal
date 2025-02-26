@@ -4,8 +4,8 @@ block main
   div.projects-wrapper
     h1.projects-wrapper-header Projects
     div.projects-wrapper-projects
-      div.projects-wrapper-project
-        img.projects-wrapper-project-image(src="../images/cat.jpeg", alt="cat image")
-        h2.projects-wrapper-project-header Project 1
-        p.projects-wrapper-project-text This is a project about something.
-        a(href='example.com') Example
+      each project in projects
+        div.projects-wrapper-project
+          img.projects-wrapper-project-image(src=project.image, alt=project.title)
+          p.projects-wrapper-project-text= project.description
+          a(href=project.link) #{project.title}

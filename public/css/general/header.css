@@ -2,8 +2,8 @@
   --navbar-padding: 1.5rem;
   --navbar-button-spacing: 1.5rem;
   --navbar-buttons-border-radius: 0px;
-  --navbar-button-width: 7rem; /* Minimum width for navbar buttons */
-  --navbar-button-height: 3rem; /* Minimum height for navbar buttons */
+  --navbar-button-width: 7rem;
+  --navbar-button-height: 3rem;
 }
 
 body {
@@ -31,12 +31,11 @@ body {
   color: var(--text-color);
   font-size: var(--font-size-medium);
   border-radius: var(--border-radius-lg);
-  padding: 0.5rem 0.5rem;
   text-decoration: none;
   width: fit-content;
   height: var(--navbar-button-height);
-  min-width: fit-content; /* Applying minimum width */
-  min-height: var(--navbar-button-height); /* Applying minimum height */
+  min-width: fit-content;
+  min-height: var(--navbar-button-height);
   text-align: center;
   align-content: center;
   align-self: center;
@@ -51,10 +50,7 @@ body {
 
 .header-wrapper-nav a {
   color: var(--text-color);
-  /* margin-left: var(--spacing); */
   border-radius: var(--border-radius-lg);
-  padding: 0.5rem 0.5rem;
-  /* background-color: var(--button-bg-color); */
   font-size: var(--font-size-medium);
   text-decoration: none;
   width: fit-content;
@@ -62,6 +58,6 @@ body {
   align-self: center;
   text-align: center;
   height: var(--navbar-button-height);
-  min-width: var(--navbar-button-width); /* Applying minimum width */
-  min-height: var(--navbar-button-height); /* Applying minimum height */
+  min-width: var(--navbar-button-width);
+  min-height: var(--navbar-button-height);
 }

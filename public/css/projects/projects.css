@@ -1,64 +1,51 @@
 .projects-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: var(--page-vertical-padding) var(--page-horizontal-padding);
-    text-align: center;
 }
 
 .projects-wrapper-header {
+    margin: 0;
     font-size: var(--font-size-large);
     font-weight: bold;
     color: var(--text-color-highlight);
     text-transform: uppercase;
-    text-shadow: 3px 3px var(--button-bg-color);
-    margin-bottom: var(--spacing);
 }
 
 .projects-wrapper-projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: var(--spacing);
-    width: 100%;
-    max-width: 1200px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: var(--page-vertical-padding) 0;
     animation: fadeIn 0.8s ease-in-out;
 }
 
 .projects-wrapper-project {
-    background: var(--secondary-bg-color);
-    padding: var(--button-padding);
-    border-radius: var(--border-radius-md);
-    box-shadow: 4px 4px 0 var(--text-color);
-    text-align: center;
+    width: calc(33.333% - var(--spacing));
     transition: transform 0.3s ease-in-out;
 }
 
 .projects-wrapper-project-image {
     width: 100%;
     height: auto;
-    image-rendering: pixelated;
-    border-bottom: 4px solid var(--button-bg-color);
-}
-
-.projects-wrapper-project-header {
-    font-size: var(--font-size-medium);
-    color: var(--text-color-highlight);
-    margin: var(--button-spacing) 0;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .projects-wrapper-project-text {
+    margin: 0;
+    padding: calc(var(--spacing) - 1rem) 0;
     font-size: var(--font-size-small);
     color: var(--text-color);
-    margin-bottom: var(--button-spacing);
 }
 
 .projects-wrapper-project a {
     display: inline-block;
-    color: var(--button-text-color);
+    color: var(--text-color-highlight);
     text-decoration: none;
-    padding: var(--button-padding);
-    border-radius: var(--border-radius-sm);
-    transition: all 0.3s ease-in-out;
+    font-size: var(--font-size-medium);
 }
 
 @keyframes fadeIn {
@@ -72,14 +59,14 @@
     }
 }
 
-@media only screen and (max-width: 900px) {
-    .projects-wrapper-projects {
-        grid-template-columns: repeat(2, 1fr);
+@media only screen and (max-width: 1200px) {
+    .projects-wrapper-project {
+        width: calc(50% - var(--spacing));
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .projects-wrapper-projects {
-        grid-template-columns: repeat(1, 1fr);
+@media only screen and (max-width: 800px) {
+    .projects-wrapper-project {
+        width: 100%;
     }
 }

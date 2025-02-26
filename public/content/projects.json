@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Kanzi Bot",
+      "image": "../content/projects/efos-bot/kanzi-bot.jpg",
+      "description": "A Discord bot with cool features.",
+      "link": "https://discord.com"
+    },
+    {
+      "title": "Kamp Tayfa",
+      "image": "../content/projects/kamp-tayfa/kamp-tayfa.jpg",
+      "description": "A web site for me and my friends to archive memes.",
+      "link": "https://kamptayfa.com"
+    },
+    {
+      "title": "Kandırdım",
+      "image": "../content/projects/kandirdim/kandirdim.jpg",
+      "description": "A real time chat app for tricking random person.",
+      "link": "https://kandirdim.com"
+    }
+  ]
+  
